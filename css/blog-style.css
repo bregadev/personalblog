@@ -1,34 +1,73 @@
-.container{
-    /* Step 1: Set display to grid */
+.blog-container{
       display:grid;
-   /* Step 2: setup rows amd columns */
-      /* grid-template-columns: repeat(3, 1fr); */
-      grid-template-columns: 300px 300px 300px;
-      grid-template-rows: 250px 600px;
+      grid-template-columns:repeat( auto-fit, minmax(auto, 1fr) );
+      grid-template-rows: 1fr 1fr 80% 1fr;
+      height: 100vh;
+      width: 100vw;
+      
       grid-template-areas: 
-      "hd hd hd hd hd hd hd hd"
-      "feat feat feat feat feat feat feat feat"
-      "main main main main main main main main"
-      "ft ft ft ft ft ft ft ft";
-      border: 2px solid yellow;
+      "hd"
+      "feat"
+      "main"
+      "ft";
+      border: 2px solid rgb(78, 73, 73);
 
   }
-  .box{
+    /* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
+    .blog-container {
+      display: grid;
+      grid-template-rows: 1fr 80% 1fr;
+      grid-template-areas: 
+      "hd hd hd hd hd hd hd"
+      "feat main main main main main main"
+      "ft ft ft ft ft ft ft";
+      border: 2px solid magenta;
+    }
+  }
+  /* Large Screens */
+@media (min-width:901px) {
+    .blog-container {
+        display: grid;
+        grid-template-rows: 1fr 80% 1fr;
+        grid-template-areas: 
+        "hd hd hd hd hd hd hd"
+        "feat main main main main main main"
+        "ft ft ft ft ft ft ft";
+        border: 2px solid blue;
+    }
+  }
+
+  .blog-box{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     border: 1px solid red;
-    background: RGB(102, 102, 102);
+    color: greenyellow;
     }
 
-  .header{
+  .blog-header{
       grid-area:hd;
   }
 
-  .footer{
+  .blog-footer{
     grid-area: ft;  
   }
+  
+  .blog-content{
+    grid-area: main;
+    background-image: url(../img/mist.jpeg);
+    opacity: .95;
+
+  }
+
   .feature{
     grid-area: feat;
+    display: flex;
+    flex-basis: 10rem;
+    
   }
-  .content{
-    grid-area: main;
+  .article{
+      display: flexbox;
+      
   }
