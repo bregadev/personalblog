@@ -48,6 +48,7 @@
     /* max-height: 20%; */
     grid-area: top;
     
+    
   }
   .card-title {
     grid-area: center;

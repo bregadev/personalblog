@@ -3,6 +3,7 @@
 @import "./content-grid.css";
 @import "./card.css";
 
+
 .container{
       display:grid;
       grid-template-columns: repeat(auto, 1fr);
@@ -105,3 +106,4 @@
   .features{
       background-color: black;
   }
+

@@ -81,3 +81,11 @@
     height: 50px;
     border-radius: 50%;
   }
+  blockquote {
+    
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font: italic small-caps bold 12px/30px Georgia, serif;
+    font-weight: bold;
+  }

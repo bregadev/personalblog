@@ -46,18 +46,20 @@
   
   #two{
     grid-area: bp2;
-    background-color:magenta;
+    background-image: url(../img/Nature-Drawings.jpeg);
   }
   
   #three{
     grid-area: bp3;
-    background-color:rgb(187, 31, 31);
+    /* background-color:rgb(187, 31, 31); */
+    background-image: url(../img/city1.jpeg);
   }
   
   #four{
-    /* grid-area: bp4; */
+    grid-area: bp4;
+    background-image: url(../img/city5.jpeg);
     /* grid-row: span 2; */
-    background-color:rgb(7, 109, 7);
+    /* background-color:rgb(7, 109, 7); */
   }
 
   /* .card{
