@@ -63,11 +63,21 @@
 
   .feature{
     grid-area: feat;
-    display: flex;
+    /* display: flex; */
     flex-basis: 10rem;
+    background: rgb(78, 73, 73);
+    color: limegreen;
     
   }
-  .article{
+  article{
       display: flexbox;
+      height: 80%;
       
+      
+  }
+  .blog-img{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
   }
