@@ -22,7 +22,7 @@
       "hd hd hd hd hd hd hd"
       "feat main main main main main main"
       "ft ft ft ft ft ft ft";
-      border: 2px solid magenta;
+      /* border: 2px solid magenta; */
     }
   }
   /* Large Screens */
@@ -34,15 +34,15 @@
         "hd hd hd hd hd hd hd"
         "feat main main main main main main"
         "ft ft ft ft ft ft ft";
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
     }
   }
 
   .blog-box{
     display: flex;
-    flex-wrap: wrap;
+    overflow: auto;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: greenyellow;
     }
 

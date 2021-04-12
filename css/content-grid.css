@@ -1,68 +1,71 @@
-.content-grid{
-  display:grid;
-  /* border: 2px solid rgb(78, 73, 73); */
-  grid-auto-columns: repeat( auto-fit, minmax(250px, 250px) );
+.content-grid {
+  display                 : grid;
+  /* border               : 2px solid rgb(78, 73, 73); */
+  grid-auto-columns       : repeat(auto-fit, minmax(250px, 250px));
   /* grid-template-columns: 50% 50%; */
-  grid-auto-rows: minmax(auto,1fr);
-  grid-auto-flow: dense;
-  height: 100vh;
-  width: auto;
-  grid-gap: 3%;
-  padding:1%;
-  margin:1%;
-  overflow: scroll;
-  grid-template-areas:
-   "bp1"
-   "bp2"
-   "bp3"
-   "bp4";
-    
-}
-@media (min-width: 600px) and (max-width:900px){
-    .content-grid{
-        display: grid;
-        grid-template-areas:
-        /* "bp1 bp1 bp2 bp2" 
-        "bp3 bp3 bp4 bp4"; */
-        "bp1"
-        "bp2"
-        "bp3"
-        "bp4";
-    }
-}
-@media (min-width:901px){
-    .content-grid{
-        display: grid;
-        grid-template-areas: 
-        "bp1 bp1 bp2 bp2" 
-        "bp3 bp3 bp4 bp4";
-    }
-}
-#one{
-    grid-area: bp1;
-    background-color:rgb(99, 131, 167);
-    /* grid-row: span 2; */
-  }
-  
-  #two{
-    grid-area: bp2;
-    background-image: url(../img/Nature-Drawings.jpeg);
-  }
-  
-  #three{
-    grid-area: bp3;
-    /* background-color:rgb(187, 31, 31); */
-    background-image: url(../img/city1.jpeg);
-  }
-  
-  #four{
-    grid-area: bp4;
-    background-image: url(../img/city5.jpeg);
-    /* grid-row: span 2; */
-    /* background-color:rgb(7, 109, 7); */
-  }
+  grid-auto-rows          : minmax(auto, 1fr);
+  grid-auto-flow          : dense;
+  height                  : 100vh;
+  width                   : auto;
+  grid-gap                : 3%;
+  padding                 : 1%;
+  margin                  : 1%;
+  overflow                : scroll;
+  grid-template-areas     :
+    "bp1"
+    "bp2"
+    "bp3"
+    "bp4";
 
-  /* .card{
+}
+
+@media (min-width: 600px) and (max-width:900px) {
+  .content-grid {
+    display: grid;
+    grid-template-areas:
+      /* "bp1 bp1 bp2 bp2" 
+        "bp3 bp3 bp4 bp4"; */
+      "bp1"
+      "bp2"
+      "bp3"
+      "bp4";
+  }
+}
+
+@media (min-width:901px) {
+  .content-grid {
+    display: grid;
+    grid-template-areas:
+      "bp1 bp1 bp2 bp2"
+      "bp3 bp3 bp4 bp4";
+  }
+}
+
+#one {
+  grid-area       : bp1;
+  background-color: rgb(99, 131, 167);
+  /* grid-row     : span 2; */
+}
+
+#two {
+  grid-area       : bp2;
+  background-image: url(../img/Nature-Drawings.jpeg);
+}
+
+#three {
+  grid-area          : bp3;
+  /* background-color:rgb(187, 31, 31); */
+  background-image   : url(../img/city1.jpeg);
+}
+
+#four {
+  grid-area          : bp4;
+  background-image   : url(../img/city5.jpeg);
+  /* grid-row        : span 2; */
+  /* background-color:rgb(7, 109, 7); */
+}
+
+/* .card{
       grid-area:auto;
       background-color: black;
   } */

@@ -4,106 +4,127 @@
 @import "./card.css";
 
 
-.container{
-      display:grid;
-      grid-template-columns: repeat(auto, 1fr);
-      /* grid-auto-columns:500px; */
-      grid-template-rows: minmax(auto,1fr);
-      height: 100vh;
-      width: 100vw;
-      grid-template-areas: 
-      "hd"
-      "sd"
-      "main"
-      "ft";
-      border: 2px solid rgb(78, 73, 73);
-      overflow:scroll;
-     
+.container {
+  display                 : grid;
+  /* grid-template-columns: repeat(auto, 1fr); */
+  grid-template-columns   : repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows      : minmax(auto, 1fr);
+  height                  : 100vh;
+  width                   : 100vw;
+  grid-template-areas     :
+    "hd"
+    "sd"
+    "main"
+    "ft";
+  border  : 2px solid rgb(78, 73, 73);
+  overflow: scroll;
 
-  }
-  /* Medium Screens */
+
+}
+
+/* Medium Screens */
 @media (min-width: 600px) and (max-width:900px) {
-    .container {
-      display: grid;
-      grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
-      grid-template-areas: 
+  .container {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas  :
       "hd hd hd hd"
       "sd main main main"
       "ft ft ft ft ";
-      border: 2px solid rgb(78, 73, 73);
-    }
+    border: 2px solid rgb(78, 73, 73);
   }
-  /* Large Screens */
+}
+
+/* Large Screens */
 @media (min-width:901px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
-        grid-template-areas: 
-        "hd hd hd hd"
-        "sd main main main"
-        "ft ft ft ft ";
-        border: 2px solid rgb(78, 73, 73);
-        
-    }
-  }
-  .box{
-      display:flex;
-      flex-flow: column;
-    /* width: 250px;
-    height: 150px; */
-    border: 1px solid limegreen;
-    background: rgb(78, 73, 73);
-    color: white;
-    }
-
-  .header{
-    display: flex;
-    grid-area:hd;
-    background: rgb(78, 73, 73);
-  }
-
-  .footer{
-    grid-area: ft;  
-  }
-  .sidebar{
-    grid-area: sd;
-  }
-  .content{
-    grid-area: main;
-   
-  }
-
-  a {
-    color: green;
-  }
-  p{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    
-  }
-  div{
-      text-align: center;
-  }
-  h1{
-      text-align: center;
-      color:limegreen;
-      
+  .container {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas  :
+      "hd hd hd hd"
+      "sd main main main"
+      "ft ft ft ft ";
+    border: 2px solid rgb(78, 73, 73);
 
   }
-  h2{
-      color: lime;
-      background: rgb(78, 73, 73);
-      text-align: center;
-  }
+}
 
-  button{
-      background-color:black;
-     
-  }
-  .button-placement{
-      float:left;
-  }
-  .features{
-      background-color: black;
-  }
+.box {
+  display      : flex;
+  flex-flow    : column;
+  justify-items: center;
+  /* width     : 250px;
+    height     : 150px; */
+  border       : 1px solid limegreen;
+  background   : rgb(78, 73, 73);
+  color        : white;
+}
 
+.header {
+  display   : flex;
+  grid-area : hd;
+  background: rgb(78, 73, 73);
+}
+
+.footer {
+  grid-area: ft;
+}
+
+.sidebar {
+  grid-area: sd;
+}
+
+.content {
+  /* display: flex;
+    flex-shrink: 2 1 auto; */
+  grid-area: main;
+
+}
+
+a {
+  color: green;
+}
+
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color     : limegreen;
+
+
+}
+
+h2 {
+  color     : lime;
+  background: rgb(78, 73, 73);
+  text-align: center;
+}
+
+button {
+  background-color: black;
+
+}
+
+.button-placement {
+  float: left;
+}
+
+.features {
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(78, 73, 73);
+}

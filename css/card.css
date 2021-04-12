@@ -1,67 +1,71 @@
 .card {
+  display                 : grid;
+  border                  : 1pt solid rgb(78, 73, 73);
+  width                   : 400px;
+  height                  : auto;
+  grid-template-columns   : repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns:50% 50%; */
+  /* grid-template-columns: 200px; */
+  grid-auto-rows          : 50% 15% 35%;
+  /* width                : 200px; */
+  box-shadow              : 0 4px 8px 0 green;
+  transition              : 0.3s;
+
+  border-radius: 5px;
+  /* 5px rounded corners */
+  grid-template-areas:
+    "top"
+    "center"
+    "bottom";
+
+
+}
+
+@media (min-width: 600px) and (max-width:900px) {
+  .card {
     display: grid;
-    border: 1pt solid rgb(78, 73, 73);
-    width: 400px;
-    height: auto;
-    grid-template-columns:repeat( auto-fit, minmax(250px, 1fr) );
-    /* grid-template-columns:50% 50%; */
-    /* grid-template-columns: 200px; */
-    grid-auto-rows: 50% 15% 35%;
-    /* width: 200px; */
-    box-shadow: 0 4px 8px 0 green;
-    transition: 0.3s;
-    
-    border-radius: 5px; /* 5px rounded corners */
-    grid-template-areas: 
-        "top"
-        "center"
-        "bottom";
-    
-        
-  }
-  
-  @media (min-width: 600px) and (max-width:900px) {
-    .card {
-      display: grid;
-      grid-template-areas: 
+    grid-template-areas:
       "top top top top top top top"
       "center center center center center center center"
       "bottom bottom bottom bottom bottom bottom bottom";
-      border: 2px solid rgb(78, 73, 73);
-    }
+    border: 2px solid rgb(78, 73, 73);
   }
-  /* Large Screens */
-@media (min-width:901px) {
-    .card {
-        display: grid;
-        grid-template-areas: 
-        "top top top top top top top"
-        "center center center center center center center"
-        "bottom bottom bottom bottom bottom bottom bottom";
-        border: 2px solid rgb(78, 73, 73);
-        
-    }
-  }
-  /* Add rounded corners to the top lebottom and the top right corner of the image */
-  .card-img {
-    border-radius: 5px 5px 0 0;
-    /* max-height: 20%; */
-    grid-area: top;
-    
-    
-  }
-  .card-title {
-    grid-area: center;
-    background-color: rgb(46, 45, 46);
-    color:black;
-    text-align: center;
-  }
+}
 
-  .text{
-    grid-area: bottom;
-    color:rgb(0, 252, 0);
-    display: flex;
-    flex-wrap: wrap;
-    background-color:rgb(78, 73, 73);
-    text-overflow:auto;
+/* Large Screens */
+@media (min-width:901px) {
+  .card {
+    display: grid;
+    grid-template-areas:
+      "top top top top top top top"
+      "center center center center center center center"
+      "bottom bottom bottom bottom bottom bottom bottom";
+    border: 2px solid rgb(78, 73, 73);
+
   }
+}
+
+/* Add rounded corners to the top lebottom and the top right corner of the image */
+.card-img {
+  border-radius: 5px 5px 0 0;
+  /* max-height: 20%; */
+  grid-area    : top;
+
+
+}
+
+.card-title {
+  grid-area       : center;
+  background-color: rgb(46, 45, 46);
+  color           : black;
+  text-align      : center;
+}
+
+.text {
+  grid-area       : bottom;
+  color           : rgb(0, 252, 0);
+  display         : flex;
+  flex-wrap       : wrap;
+  background-color: rgb(78, 73, 73);
+  text-overflow   : auto;
+}
